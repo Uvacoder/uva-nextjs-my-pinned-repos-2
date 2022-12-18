@@ -37,7 +37,7 @@ export default function Home({ pinnedItems }) {
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://vercel.com"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -73,7 +73,7 @@ export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
       {
-        user(login: "colbyfayock") {
+        user(login: "uvacoder") {
           pinnedItems(first: 6, types: [REPOSITORY]) {
             totalCount
             edges {
